@@ -1,0 +1,25 @@
+{
+    "author": "James Donovan",
+    "bugs": {
+        "url": "https://github.com/JWDonovan/posthtml-attrs-alpha/issues"
+    },
+    "dependencies": {
+        "posthtml": "^0.13.0"
+    },
+    "description": "PostHTML Plugin to Sort HTML Attributes Alphabetically",
+    "homepage": "https://github.com/JWDonovan/posthtml-attrs-alpha#readme",
+    "keywords": [
+        "posthtml"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "posthtml-attrs-alpha",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JWDonovan/posthtml-attrs-alpha.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "0.0.1"
+}
