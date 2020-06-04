@@ -13,11 +13,11 @@ module.exports = function() {
             attrs.forEach(function(attr) {
                 sortedAttrs[attr] = (node.attrs[attr]) ? node.attrs[attr] : true;
             });
-            
+
             node.attrs = sortedAttrs;
             return node;
         });
-        
+
         return tree;
     }
 }

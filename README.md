@@ -8,42 +8,21 @@ npm install -D posthtml-attrs-alpha
 ```
 
 ## Usage
-### Node
 ```js
 const posthtml = require('posthtml');
 const attrsAlpha = require('posthtml-attrs-alpha');
-const html = fs.readFileSync('path/to/file.html');
+const html = `
+    <html>
+        <body>
+            <p id="omg" class="wow">OMG</p>
+        </body>
+    </html>
+`
 
 posthtml()
     .use(attrsAlpha())
     .process(html)
-    .then(function result() {
-        fs.writeFileSync('path/to/file.html');
-    });
-```
-
-### Gulp
-#### Install
-```bash
-npm install -D gulp-posthtml
-```
-
-#### gulpfile.js
-```js
-import { task, src, dest } from 'gulp'
-import posthtml from 'gulp-posthtml'
- 
-task('html', () => {
-  let path
- 
-  const plugins = [ require('posthtml-attrs-alpha')() ]
-  const options = {}
- 
-  return src('src/*.html')
-    .pipe(posthtml(plugins, options))
-    .pipe(rename({ ext: '.html' }))
-    .pipe(dest('dest'))
-})
+    .then((result) => console.log(result.html));
 ```
 
 ## License
